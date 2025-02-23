@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67b53d45cfe0933518b7c053"
+  },
+  "ownerUsername": "hmartinez",
+  "ownerEmail": "martinez@gmail.com",
+  "title": "IPhones",
+  "text": "Los IPhones son demasiado caros.",
+  "categoryId": {
+    "$oid": "67b53356e348a91eac1347a7"
+  },
+  "category": "Technology",
+  "trendLevel": "NEW",
+  "owner": {
+    "$oid": "67b375d47808a166a3096806"
+  },
+  "state": true,
+  "views": 0,
+  "comments": [
+    {
+      "ownerUsername": "hmartinez",
+      "ownerEmail": "martinez@gmail.com",
+      "text": "Los samsungs son mejores.",
+      "owner": {
+        "$oid": "67b375d47808a166a3096806"
+      },
+      "postRef": {
+        "$oid": "67b53d45cfe0933518b7c053"
+      },
+      "state": true,
+      "_id": {
+        "$oid": "67b57b3f42d3a15540dda4b2"
+      },
+      "createdAt": {
+        "$date": "2025-02-19T06:33:35.463Z"
+      },
+      "updatedAt": {
+        "$date": "2025-02-19T06:33:35.463Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-02-19T02:09:09.979Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-19T06:33:35.464Z"
+  }
+}]

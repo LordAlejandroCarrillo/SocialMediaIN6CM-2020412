@@ -1,0 +1,286 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "SocialMedia",
+    "collectionId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+    "dateExported": "2025-02-23T22:19:10.456Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "1fda364d-5f59-4646-8d06-93dbb58fe86d",
+            "name": "Users",
+            "containerId": "",
+            "created": "2025-02-18T16:11:53.910Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "31e155c3-5dce-45b9-9ec3-602c416b60ac",
+            "name": "Posts",
+            "containerId": "",
+            "created": "2025-02-18T16:11:59.254Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "b034b549-c909-4d64-a047-7a79e78f89f5",
+            "name": "Comments",
+            "containerId": "",
+            "created": "2025-02-18T16:12:10.638Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "66b2b5ef-7c1a-4893-b2b0-08e9fddd6eb7",
+            "name": "LogIn",
+            "containerId": "",
+            "created": "2025-02-18T16:12:15.854Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "b86f73dd-38d0-4b41-9f1c-a7c59417682a",
+            "name": "Category",
+            "containerId": "",
+            "created": "2025-02-20T06:22:03.395Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "a76ed112-e50a-4f96-8843-40b72018d582",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "1fda364d-5f59-4646-8d06-93dbb58fe86d",
+            "name": "registerUser",
+            "url": "http://localhost:3000/socialMediaSystem/v1/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-18T16:20:47.899Z",
+            "modified": "2025-02-18T16:25:15.346Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Pedro\",\n  \"surname\":\"Johnson\",\n  \"username\":\"pjohnson\",\n  \"email\":\"pedro@gmail.com\",\n  \"password\":\"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "45465d44-a676-4504-819a-9dd6ba0c541f",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "b034b549-c909-4d64-a047-7a79e78f89f5",
+            "name": "addComment",
+            "url": "http://localhost:3000/socialMediaSystem/v1/comments/67b53d45cfe0933518b7c053",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-19T05:37:16.425Z",
+            "modified": "2025-02-20T04:13:21.666Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I1MzM1NWUzNDhhOTFlYWMxMzQ3YTUiLCJpYXQiOjE3NDAwMjQ3ODMsImV4cCI6MTc0MDAzMTk4M30.VOrJ_AVIMb8RzqCGN4B0roPcXfiGeD-tKWEq4Op2zZk"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\":\"Prefiero pc\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ce8a4189-d802-40af-9416-d73267d8409e",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "b86f73dd-38d0-4b41-9f1c-a7c59417682a",
+            "name": "addCategory",
+            "url": "http://localhost:3000/socialMediaSystem/v1/categories/add-category/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-20T06:22:10.521Z",
+            "modified": "2025-02-20T06:30:32.746Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I1MzM1NWUzNDhhOTFlYWMxMzQ3YTUiLCJpYXQiOjE3NDAwMzMwMjYsImV4cCI6MTc0MDA0MDIyNn0.eAABAIzdD1zMSRAh9tzcfY_PrXTAJm1hUgky1g6p1ss"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Languages\",\n  \"description\":\"Culture, learn, entertainment, personal development, etc.\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f1f7e40e-7189-408b-babe-ea457d34bbed",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "1fda364d-5f59-4646-8d06-93dbb58fe86d",
+            "name": "putUser",
+            "url": "http://localhost:3000/socialMediaSystem/v1/users/update-user/67b375d47808a166a3096806",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2025-02-18T16:20:55.661Z",
+            "modified": "2025-02-18T16:35:32.474Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzNzVkNDc4MDhhMTY2YTMwOTY4MDYiLCJpYXQiOjE3Mzk4OTYwNDAsImV4cCI6MTczOTkwMzI0MH0.e-ZPtVjHscDBHkbfzNzcy28ZJINxEpwhx4mMc99ZdqM"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Jose\",\n  \"surname\":\"Lopez\",\n  \"username\":\"jlopez\",\n  \"email\":\"lopez@gmail.com\",\n  \"oldPassword\":\"12345678\",\n  \"password\":\"123456789\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4b27b46c-7eeb-42ec-b825-9ef3c6f960eb",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "b034b549-c909-4d64-a047-7a79e78f89f5",
+            "name": "updateComment",
+            "url": "http://localhost:3000/socialMediaSystem/v1/comments/update-comment/67b57b3f42d3a15540dda4b2",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2025-02-20T00:20:58.022Z",
+            "modified": "2025-02-20T04:17:52.601Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I1MzM1NWUzNDhhOTFlYWMxMzQ3YTUiLCJpYXQiOjE3NDAwMjQ3ODMsImV4cCI6MTc0MDAzMTk4M30.VOrJ_AVIMb8RzqCGN4B0roPcXfiGeD-tKWEq4Op2zZk"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text\":\"Android es mejor.\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5d2110bb-abdd-4d99-9361-222786c494c9",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "b034b549-c909-4d64-a047-7a79e78f89f5",
+            "name": "deleteComment",
+            "url": "http://localhost:3000/socialMediaSystem/v1/comments/delete-comment/67b6abe14c443b84c767ff3d",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2025-02-20T04:33:57.312Z",
+            "modified": "2025-02-20T04:48:55.345Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I1MzM1NWUzNDhhOTFlYWMxMzQ3YTUiLCJpYXQiOjE3NDAwMjY5MjksImV4cCI6MTc0MDAzNDEyOX0.bMJFoF83PWFtDZLqFf9tPYg8q-4xtgOZ38fcSIhN-gU"
+                }
+            ]
+        },
+        {
+            "_id": "28ba5a76-6113-47ac-b9c8-c9a99b6e03db",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "b86f73dd-38d0-4b41-9f1c-a7c59417682a",
+            "name": "updateCategory",
+            "url": "http://localhost:3000/socialMediaSystem/v1/categories/update-category/67b6cc08e90f9baa16050156",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2025-02-20T06:44:04.115Z",
+            "modified": "2025-02-20T06:53:29.075Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzNzVkNDc4MDhhMTY2YTMwOTY4MDYiLCJpYXQiOjE3NDAwMzQ0MDEsImV4cCI6MTc0MDA0MTYwMX0.JbvbWbh90mcTc5MJvzYDEdWcB152JWOITNVusG9zhKs"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Cars\",\n  \"description\":\"Culture, learn, entertainment, personal development, etc.\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "bc42f0a0-67aa-49b3-bf98-dff92114c024",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "66b2b5ef-7c1a-4893-b2b0-08e9fddd6eb7",
+            "name": "logIn",
+            "url": "http://localhost:3000/socialMediaSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-18T16:21:37.862Z",
+            "modified": "2025-02-20T07:02:41.667Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"jfernandez\",\n  \"password\":\"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0acc2f9c-bed1-44c2-8431-622eb03d51c5",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "b86f73dd-38d0-4b41-9f1c-a7c59417682a",
+            "name": "deleteCategory",
+            "url": "http://localhost:3000/socialMediaSystem/v1/categories/delete-category/67b552cba2cc955e55fa125c",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-02-20T07:00:03.453Z",
+            "modified": "2025-02-20T07:09:21.369Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I1MzM1NWUzNDhhOTFlYWMxMzQ3YTUiLCJpYXQiOjE3NDAwMzQ5NjEsImV4cCI6MTc0MDA0MjE2MX0.jwBKi7wT4HX9Wh3CN3wYchT082h-rlmWNrL8lt4Q2xk"
+                }
+            ]
+        },
+        {
+            "_id": "4c115939-5fb9-41bb-b3f6-928a302b4de0",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "31e155c3-5dce-45b9-9ec3-602c416b60ac",
+            "name": "addPost",
+            "url": "http://localhost:3000/socialMediaSystem/v1/posts/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-19T01:02:49.216Z",
+            "modified": "2025-02-19T02:09:09.998Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzNzVkNDc4MDhhMTY2YTMwOTY4MDYiLCJpYXQiOjE3Mzk5MjczNDgsImV4cCI6MTczOTkzNDU0OH0.g5DH8lCqLwHFGT8AY7Y6awGTUOZOJYCWhWD75nd0S9k"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"IPhones\",\n  \"text\":\"Los IPhones son demasiado caros.\",\n  \"category\":\"technology\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c2b45941-461f-466f-b1f4-fda871d6e804",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "31e155c3-5dce-45b9-9ec3-602c416b60ac",
+            "name": "putPost",
+            "url": "http://localhost:3000/socialMediaSystem/v1/posts/update-post/67b53d45cfe0933518b7c053",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-02-19T03:21:20.365Z",
+            "modified": "2025-02-19T05:17:44.606Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzNzVkNDc4MDhhMTY2YTMwOTY4MDYiLCJpYXQiOjE3Mzk5MzcxOTIsImV4cCI6MTczOTk0NDM5Mn0.ib7MkvIPCsn7v4_2oa929icPvJp6OW2vX07VxznGenE"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"0-1\",\n  \"text\":\"Mucho drama en el partido de ayer.\",\n  \"category\":\"sports\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "fa0a393e-5c05-4831-bb9f-352eeb328830",
+            "colId": "cf597c89-fd29-4c8f-ab7a-01dbd808145e",
+            "containerId": "31e155c3-5dce-45b9-9ec3-602c416b60ac",
+            "name": "deletePost",
+            "url": "http://localhost:3000/socialMediaSystem/v1/posts/delete-post/67b53d45cfe0933518b7c053",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2025-02-19T05:09:14.000Z",
+            "modified": "2025-02-19T06:33:06.815Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzNzVkNDc4MDhhMTY2YTMwOTY4MDYiLCJpYXQiOjE3Mzk5NDY3ODAsImV4cCI6MTczOTk1Mzk4MH0.ZLwye9MuVvdj-V5R63F55aFbGnciGOd6iwneI0oOnYk"
+                }
+            ]
+        }
+    ],
+    "ref": "XfERUcM2fCMUIhHvzbxKWNvqT28d2iMdb2IGhqzKbVKX30PERtlauX3UwfGJ04BuW-9FBHDwlyczu2Xh_Sz8pw"
+}
