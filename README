@@ -1,4 +1,3 @@
-La contraseña del admin es 123456789
-La de los demás usuarios es 12345678
+Las contraseñas solo varían entre "12345678" y "123456789".
 
-Las contraseñas solo varían entre esas dos.
+Si algunas veces no deja realizar alguna acción, puede ser porque algún objeto tiene su estado falso.
