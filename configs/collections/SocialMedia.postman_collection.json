@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "b14f537c-3599-45c5-b154-207af4b43dd6",
+		"name": "SocialMedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42597863"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Pedro\",\r\n  \"surname\":\"Johnson\",\r\n  \"username\":\"JhonsonP\",\r\n  \"email\":\"pedro@gmail.com\",\r\n  \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzNzVkNDc4MDhhMTY2YTMwOTY4MDYiLCJpYXQiOjE3NDA1NDA2MzcsImV4cCI6MTc0MDU0NzgzN30.QMilRcMD5dvFkrkoqRyHpTE2yV98cFRvCmnlKL94BhE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Jose\",\r\n  \"surname\":\"Lopez\",\r\n  \"username\":\"LopezJ\",\r\n  \"email\":\"lopez@gmail.com\",\r\n  \"oldPassword\":\"12345678\",\r\n  \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/users/update-user/67b375d47808a166a3096806",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"users",
+								"update-user",
+								"67b375d47808a166a3096806"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "addPost",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IzNzVkNDc4MDhhMTY2YTMwOTY4MDYiLCJpYXQiOjE3NDA1NDA5ODksImV4cCI6MTc0MDU0ODE4OX0.VT9_-4pbSFE1xPO7BdKn30sCz0YVYNGLVK1gu35y8ls",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\"El avance\",\r\n  \"text\":\"El avance tecnológico de hoy en día es increíble.\",\r\n  \"category\":\"Technology\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/posts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putPost",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE0ODMsImV4cCI6MTc0MDU0ODY4M30.ChOfZ80hYBN4GAwc6y78ZnPIVC1ETH1YwxypwYcrFgg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\"0-1\",\r\n  \"text\":\"Mucho drama en el partido de ayer.\",\r\n  \"category\":\"sports\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/posts/update-post/67bba940900a72049df4461b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"posts",
+								"update-post",
+								"67bba940900a72049df4461b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePost",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE2NjQsImV4cCI6MTc0MDU0ODg2NH0.nbo3mJCzaLnsmxLBuasPbXekk8NCZDihQcb97yxhrbk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/posts/delete-post/67bba940900a72049df4461b?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"posts",
+								"delete-post",
+								"67bba940900a72049df4461b"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "addComment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE2NjQsImV4cCI6MTc0MDU0ODg2NH0.nbo3mJCzaLnsmxLBuasPbXekk8NCZDihQcb97yxhrbk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"text\":\"Prefiero pc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/comments/67bba940900a72049df4461b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"comments",
+								"67bba940900a72049df4461b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE5MjgsImV4cCI6MTc0MDU0OTEyOH0.D0KDz4jC9N3j3i3d2PVd1Zy2g7zuDkTBY9Cu0NFPhEc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"text\":\"Android es mejor.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/comments/update-comment/67be8fa7db2f8f64896ccf31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"comments",
+								"update-comment",
+								"67be8fa7db2f8f64896ccf31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE2NjQsImV4cCI6MTc0MDU0ODg2NH0.nbo3mJCzaLnsmxLBuasPbXekk8NCZDihQcb97yxhrbk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/comments/delete-comment/67be8fa7db2f8f64896ccf31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"comments",
+								"delete-comment",
+								"67be8fa7db2f8f64896ccf31"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LogIn",
+			"item": [
+				{
+					"name": "logIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"fernandez@gmail.com\",\r\n  \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "addCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE2NjQsImV4cCI6MTc0MDU0ODg2NH0.nbo3mJCzaLnsmxLBuasPbXekk8NCZDihQcb97yxhrbk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\":\"Read\",\r\n  \"description\":\"Culture, learn, entertainment, personal development, etc.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/categories/add-category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"categories",
+								"add-category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE2NjQsImV4cCI6MTc0MDU0ODg2NH0.nbo3mJCzaLnsmxLBuasPbXekk8NCZDihQcb97yxhrbk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\":\"Soccer\",\r\n  \"description\":\"All about soccer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/categories/update-category/67b552cba2cc955e55fa125c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"categories",
+								"update-category",
+								"67b552cba2cc955e55fa125c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JiYThjMzkwMGE3MjA0OWRmNDQ2MGIiLCJpYXQiOjE3NDA1NDE2NjQsImV4cCI6MTc0MDU0ODg2NH0.nbo3mJCzaLnsmxLBuasPbXekk8NCZDihQcb97yxhrbk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/socialMediaSystem/v1/categories/delete-category/67b552cba2cc955e55fa125c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"socialMediaSystem",
+								"v1",
+								"categories",
+								"delete-category",
+								"67b552cba2cc955e55fa125c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
